@@ -26,12 +26,12 @@ const path = require("path");
 const Caver = require('caver-js')
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
-const accessKeyId = "ACCESS_KEY";
-const secretAccessKey = "SECRET_KEY";
+const accessKeyId = "";
+const secretAccessKey = "";
 
 const HDWalletProvider = require("truffle-hdwallet-provider-klaytn");
-const privateKey = "0x123";
-const cypressPrivateKey = "0x456";
+const privateKey = "";
+const cypressPrivateKey = "";
 
 module.exports = {
   /**
@@ -105,7 +105,7 @@ module.exports = {
       gasPrice: null
     },
     cypress: {
-      provider: () => { return new HDWalletProvider(privateKey, "http://your.cypress.en:8551") },
+      provider: () => { return new HDWalletProvider(privateKey, "http://localhost:8551") },
       network_id: '8217', //Klaytn mainnet's network id
       gas: '8500000',
       gasPrice: null
